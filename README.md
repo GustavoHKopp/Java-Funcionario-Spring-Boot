@@ -46,7 +46,7 @@ A API estará rodando em http://localhost:8080 🚀
 
 #### 📋 Listar todos os funcionários
 
-```http
+```bash
   GET /funcionarios
 ```
 
@@ -65,7 +65,7 @@ A API estará rodando em http://localhost:8080 🚀
 
 #### ➕ Cadastrar um funcionário
 
-```http
+```bash
   POST /funcionarios
 ```
 
@@ -93,7 +93,7 @@ A API estará rodando em http://localhost:8080 🚀
 
 #### ✏ Atualizar um funcionário (passando apenas os campos desejados)
 
-```http
+```bash
   PUT /funcionarios/{id}
 ```
 
@@ -125,7 +125,7 @@ A API estará rodando em http://localhost:8080 🚀
 
 #### ❌ Remover um funcionário
 
-```http
+```bash
   DELETE /funcionarios/{id}
 ```
 
