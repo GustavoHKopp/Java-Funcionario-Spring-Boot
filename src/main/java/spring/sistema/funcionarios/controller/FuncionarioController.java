@@ -5,11 +5,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import spring.sistema.funcionarios.dto.FuncionarioDTO;
 import spring.sistema.funcionarios.model.Funcionario;
 import spring.sistema.funcionarios.service.FuncionarioService;
 
@@ -20,8 +20,13 @@ public class FuncionarioController {
 	private FuncionarioService service;
 	
 	@GetMapping
-	public List<Funcionario> listarTodos(){
+	public List<FuncionarioDTO> listarTodos(){
 		return service.listarTodos();
+	}
+	
+	@GetMapping("/{id}")
+	public Funcionario listarUm(@PathVariable Long id){
+		return service.listarUm(id);
 	}
 	
 	@PostMapping
