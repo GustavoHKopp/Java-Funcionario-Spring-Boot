@@ -1,11 +1,11 @@
 package spring.sistema.funcionarios.service;
+
 import org.springframework.stereotype.Service;
-
 import jakarta.persistence.EntityNotFoundException;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
+import spring.sistema.funcionarios.dto.FuncionarioDTO;
 import spring.sistema.funcionarios.model.Funcionario;
 import spring.sistema.funcionarios.repository.FuncionarioRepository;
 
@@ -14,8 +14,12 @@ public class FuncionarioService {
 	@Autowired
 	private FuncionarioRepository repository;
 	
-	public List<Funcionario> listarTodos(){
-		return repository.findAll();
+	public List<FuncionarioDTO> listarTodos() {
+        return repository.buscarNomesEIds();
+    }
+	
+	public Funcionario listarUm(Long id) {
+		return repository.findById(id).orElseThrow(() -> new EntityNotFoundException("Funcinário não encontrado"));
 	}
 	
 	public Funcionario salvar(Funcionario funcionario) {
