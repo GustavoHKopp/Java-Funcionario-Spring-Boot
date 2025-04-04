@@ -56,11 +56,36 @@ A API estará rodando em http://localhost:8080 🚀
       {
           "id": 2,
           "nome": "João",
-          "salario": 8000.00,
-          "funcao": "Programador Full Stack",
-          "setor": "Programação"
+          "funcao": "Programador Front-end"
+      },
+      {
+          "id": 3,
+          "nome": "Gabriel",
+          "funcao": "Programador Back-end"
       }
   ]
+```
+
+#### 📋 Listar um funcionário
+
+```bash
+  GET /funcionarios/{id}
+```
+
+#### 🔹 Resposta:
+```http
+    {
+        "id": 2,
+        "nome": "João",
+        "salario": 8000.00,
+        "funcao": "Programador Front-end",
+        "setor": "Programação"
+    }
+```
+
+#### 🔹 Erros:
+```http
+404 Not Found → Se o funcionário não existir.
 ```
 
 #### ➕ Cadastrar um funcionário
