@@ -14,6 +14,13 @@ public class Funcionario {
 	private String funcao;
 	private String setor;
 	
+	public Funcionario(String nome, Double salario, String funcao, String setor){
+		this.nome = nome;
+		this.salario = salario;
+		this.funcao = funcao;
+		this.setor = setor;
+	}
+	
 	public Long getId() {
 		return id;
 	}
