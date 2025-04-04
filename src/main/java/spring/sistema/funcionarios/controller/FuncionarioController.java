@@ -1,4 +1,4 @@
-package spring.sistema.funcionarios.contorller;
+package spring.sistema.funcionarios.controller;
 
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
