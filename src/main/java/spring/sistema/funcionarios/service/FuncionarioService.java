@@ -15,7 +15,7 @@ public class FuncionarioService {
 	private FuncionarioRepository repository;
 	
 	public List<FuncionarioDTO> listarTodos() {
-        return repository.buscarNomesEIds();
+        return repository.buscarTodos();
     }
 	
 	public Funcionario listarUm(Long id) {

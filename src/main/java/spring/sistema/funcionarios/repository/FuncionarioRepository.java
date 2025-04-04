@@ -10,6 +10,6 @@ import spring.sistema.funcionarios.model.Funcionario;
 @Repository
 public interface FuncionarioRepository extends JpaRepository<Funcionario, Long> {
 	
-	@Query("SELECT new spring.sistema.funcionarios.dto.FuncionarioDTO(f.id, f.nome) FROM Funcionario f")
-    List<FuncionarioDTO> buscarNomesEIds();
+	@Query("SELECT new spring.sistema.funcionarios.dto.FuncionarioDTO(f.id, f.nome, f.funcao) FROM Funcionario f")
+    List<FuncionarioDTO> buscarTodos();
 }
