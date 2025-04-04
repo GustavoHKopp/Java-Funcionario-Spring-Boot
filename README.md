@@ -165,10 +165,6 @@ A API estará rodando em http://localhost:8080 🚀
 ```http
 404 Not Found → Se o funcionário não existir.
 ```
-## Melhorias
-
-Adicionar funcionalidade para buscar somente um funcionário.
-
 
 ## Licença
 
